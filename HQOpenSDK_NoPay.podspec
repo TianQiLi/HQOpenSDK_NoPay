@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
         s.source_files  = "HQOpenSDK_NoPay/*.{h,m}"
         
         #s.resources = "HQOpenSDK_NoPay/*.xib"
-        s.preserve_paths = 'libs/*.a'
+        s.preserve_paths = 'HQOpenSDK_NoPay/libs/*.a'
         
        
 end
