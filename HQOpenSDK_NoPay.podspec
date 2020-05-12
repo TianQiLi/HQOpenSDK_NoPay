@@ -9,9 +9,10 @@ Pod::Spec.new do |s|
         s.platform              = :ios, "8.0"
         s.requires_arc  = true
         s.source_files  = "HQOpenSDK_NoPay/*.{h,m}"
-        
+     
         #s.resources = "HQOpenSDK_NoPay/*.xib"
         s.preserve_paths = 'HQOpenSDK_NoPay/libs/*.a'
-        
+        s.vendored_libraries = 'HQOpenSDK_NoPay/libs/*.a'
        
 end
+
