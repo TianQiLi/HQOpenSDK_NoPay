@@ -13,20 +13,17 @@ Pod::Spec.new do |s|
         s.author                = {"litianqi" => "litianqi@hqwx.com"}
        #s.source                = {:path => "."}
         
-        s.source                = {:git => "https://github.com/TianQiLi/HQOpenSDK_NoPay.git",:tag => s.version.to_s}
-        
+       # s.source                = {:git => "https://github.com/TianQiLi/HQOpenSDK_NoPay.git",:tag => s.version.to_s}
+         s.source       = { :http => "https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK1.8.0_NoPay.zip"}
         s.platform              = :ios, "8.0"
         s.requires_arc  = true
         s.public_header_files = "HQOpenSDK_NoPay/Classes/*.{h}"
         s.source_files  = "HQOpenSDK_NoPay/Classes/*.{h}"
-        s.vendored_libraries = "HQOpenSDK_NoPay/libs/libWeChatSDK.a"
+        #s.vendored_libraries = "HQOpenSDK_NoPay/libs/libWeChatSDK.a"
         
         s.frameworks = "SystemConfiguration", "Security", "CoreTelephony", "CFNetwork", "UIKit"
         s.libraries = "z", "sqlite3.0", "c++"
         
-        s.xcconfig   = {
-            'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/HQOpenSDK_NoPay/libs/"'
-        }
        
 end
 
