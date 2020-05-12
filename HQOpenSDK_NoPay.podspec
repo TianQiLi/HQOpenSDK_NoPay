@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
         s.name                  = "HQOpenSDK_NoPay"
-        s.version               = "1.8.7.1"
+        s.version               = "1.8.7.2"
         s.summary               = "wx nopay"
         s.homepage              = "http://www.100yy.com"
         s.license               = "MIT"
