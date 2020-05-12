@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
         s.homepage              = "http://www.100yy.com"
         s.license               = "MIT"
         s.author                = {"litianqi" => "litianqi@hqwx.com"}
-        s.source                = {http => "https://github.com/TianQiLi/HQOpenSDK_NoPay.git"}
+        s.source                = {:git => "https://github.com/TianQiLi/HQOpenSDK_NoPay.git",:tag => s.version.to_s}
         s.platform              = :ios, "8.0"
         s.requires_arc  = true
         s.source_files  = "HQOpenSDK_NoPay/*.{h,m}"
