@@ -11,17 +11,22 @@ Pod::Spec.new do |s|
         :"text" => " Copyright 2020 weixin \n"}
 
         s.author                = {"litianqi" => "litianqi@hqwx.com"}
-        #s.source                = {:path => "."}
+       #s.source                = {:path => "."}
         
         s.source                = {:git => "https://github.com/TianQiLi/HQOpenSDK_NoPay.git",:tag => s.version.to_s}
+        
         s.platform              = :ios, "8.0"
         s.requires_arc  = true
-        s.source_files  = "HQOpenSDK_NoPay/*.{h}"
-        s.vendored_libraries = "HQOpenSDK_NoPay/*.a"
-        
+        s.public_header_files = "HQOpenSDK_NoPay/Classes/*.{h}"
+        s.source_files  = "HQOpenSDK_NoPay/Classes/*.{h}"
+        s.vendored_libraries = "HQOpenSDK_NoPay/libs/libWeChatSDK.a"
         
         s.frameworks = "SystemConfiguration", "Security", "CoreTelephony", "CFNetwork", "UIKit"
         s.libraries = "z", "sqlite3.0", "c++"
+        
+        s.xcconfig   = {
+            'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/HQOpenSDK_NoPay/libs/"'
+        }
        
 end
 
